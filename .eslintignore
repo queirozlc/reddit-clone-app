@@ -1,0 +1,7 @@
+node_modules
+.next
+/*.js
+**/.next/*
+**/node_modules/*
+**/out/*
+index.tsx.hbs
