@@ -4,7 +4,7 @@
 
 @layer base {
   body {
-    @apply bg-light-gray-500;
+    @apply bg-light-gray-500 font-body;
   }
 }
 
@@ -25,7 +25,7 @@
   }
 
   .authInput {
-    @apply w-full rounded-full px-6 h-12 outline-none hover:border hover:border-gray-400/60 focus:border border-gray-400/60 bg-gray-100 transition-all duration-300 placeholder-transparent font-title text-sm font-medium xs:text-base;
+    @apply w-full rounded-full pl-6 pr-10 h-12 outline-none hover:border hover:border-gray-400/60 focus:border border-gray-400/60 bg-gray-100 transition-all duration-300 placeholder-transparent font-title text-sm font-medium xs:text-base;
   }
 
   .floatingLabel {
@@ -34,5 +34,50 @@
 
   .buttonDisabled {
     @apply !opacity-50 cursor-default pointer-events-none;
+  }
+
+  .inputInvalid {
+    @apply border border-error-500 hover:border-error-500;
+  }
+
+  .inputValid {
+    @apply border border-soft-blue-500 hover:border-soft-blue-500;
+  }
+
+  .myContainer {
+    @apply min-h-screen mx-auto px-4 sm:px-6 lg:px-8 max-w-screen-lg;
+  }
+
+  .spanAuthHeader {
+    @apply text-dark-gray-500 text-xs font-medium;
+  }
+
+  .buttonBase {
+    @apply rounded-full outline-none transition-all duration-100 ease-in-out text-sm;
+  }
+
+  .buttonOAuth {
+    @apply relative flex h-9 w-full cursor-pointer items-center justify-center rounded-full border border-gray-200 bg-transparent px-4 font-body font-medium text-soft-gray-500 outline-none transition-all duration-300 hover:border-blue-200 hover:bg-lighest-blue-500/10;
+  }
+
+  .buttonSolid {
+    @apply bg-link-500 text-white border-none font-body font-bold
+         hover:bg-link-500/80 w-20 lg:w-28 py-1.5;
+  }
+
+  .buttonOutline {
+    @apply bg-white hidden md:block text-link-500 border border-link-500 md:px-5 lg:px-8 py-1
+        hover:bg-link-100/25 font-body
+        font-bold;
+  }
+
+  .buttonBrand {
+    @apply bg-brand-500 text-white
+    border-none font-title font-bold md:px-5 lg:px-8 py-2.5
+  hover:bg-brand-500/90;
+  }
+
+  .splitter {
+    @apply w-full h-px bg-gray-200;
   }
 }
