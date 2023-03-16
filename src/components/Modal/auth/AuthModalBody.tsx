@@ -38,23 +38,23 @@ const AuthModalBody: React.FC<AuthModalBodyProps> = ({
 
               {modalState.view === 'login' ? (
                 <>
-                  <span className="font-body text-xs text-dark-gray-500">
+                  <p className="font-body text-xs text-dark-gray-500">
                     By continuing, you agree are setting up a Reddit account and
                     agree to our{' '}
                     <span className="spanLinkSecondary">User Agreement</span>{' '}
                     and{' '}
                     <span className="spanLinkSecondary">Privacy Policy</span>.
-                  </span>
+                  </p>
                 </>
               ) : (
                 <>
-                  <span className="font-body text-xs text-dark-gray-500">
+                  <p className="font-body text-xs text-dark-gray-500">
                     By continuing, you are setting up a Reddit account and agree
                     to our{' '}
                     <span className="spanLinkSecondary">User Agreement</span>{' '}
                     and{' '}
                     <span className="spanLinkSecondary">Privacy Policy</span>.
-                  </span>
+                  </p>
                 </>
               )}
             </div>
@@ -89,11 +89,11 @@ const AuthModalBody: React.FC<AuthModalBodyProps> = ({
 
             {/* Divisor */}
             <div className="flex items-center space-x-4">
-              <div className="w-full h-px bg-gray-200" />
+              <div className="splitter" />
               <span className="font-title font-bold text-sm uppercase text-gray-400">
                 or
               </span>
-              <div className="w-full h-px bg-gray-200" />
+              <div className="splitter" />
             </div>
             {/* Auth Form */}
             <AuthForm view={modalState.view} />
