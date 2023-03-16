@@ -1,18 +1,17 @@
 import AuthLayout from '@/components/AuthLayout'
 import AuthPagesBody from '@/components/AuthPagesBody'
-import { ReactElement } from 'react'
 import { NextPageWithLayout } from '../_app'
 
-const Login: NextPageWithLayout = () => {
+const Register: NextPageWithLayout = () => {
   return (
     <main className="myContainer bg-white md:min-w-full">
-      <AuthPagesBody page="login" />
+      <AuthPagesBody page="register" />
     </main>
   )
 }
 
-Login.getLayout = function getLayout(page: ReactElement) {
+Register.getLayout = function getLayout(page) {
   return <AuthLayout>{page}</AuthLayout>
 }
 
-export default Login
+export default Register
