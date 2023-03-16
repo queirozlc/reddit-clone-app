@@ -1,6 +1,7 @@
 import Button from '@/components/Button'
 import { authModalState } from '@/utils/atoms/authModalAtom'
 import { useSetRecoilState } from 'recoil'
+import InputGroup from './InputGroup'
 
 interface AuthFormProps {
   view: 'login' | 'signup' | 'resetPassword'
@@ -17,35 +18,25 @@ const AuthForm: React.FC<AuthFormProps> = ({ view }) => {
   }
 
   return (
-    <form action="" className="space-y-2">
+    <form className="space-y-2">
       {view === 'login' && (
         <>
           <div className="space-y-4">
-            <div className="flex items-center relative">
-              <input
-                type="text"
-                id="username"
-                className="peer authInput"
-                placeholder="Username"
-                required
-              />
-              <label htmlFor="username" className="floatingLabel">
-                Username
-              </label>
-            </div>
+            <InputGroup
+              id="username"
+              label="Username"
+              type="text"
+              placeholder="Username"
+              required
+            />
 
-            <div className="flex items-center relative">
-              <input
-                type="password"
-                id="password"
-                className="peer authInput"
-                placeholder="Password"
-                required
-              />
-              <label htmlFor="password" className="floatingLabel">
-                Password
-              </label>
-            </div>
+            <InputGroup
+              id="password"
+              label="password"
+              type="password"
+              placeholder="Password"
+              required
+            />
           </div>
 
           <div className="flex flex-col space-y-4 pt-3 lg:space-y-5">
