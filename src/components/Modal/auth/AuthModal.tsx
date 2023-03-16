@@ -23,7 +23,7 @@ const AuthModal: React.FC<AuthModalProps> = ({ isOpen }) => {
       <div className="relative z-10">
         <div className={`${isOpen ? 'overlay' : 'invisible'}`}>
           <div
-            className={`fixed inset-0 z-10  transition-all duration-500 transform  ${
+            className={`fixed inset-0 z-10 overflow-y-auto transition-all duration-500 transform  ${
               isOpen ? 'translate-y-0 visible' : 'invisible translate-y-96'
             }`}
           >
