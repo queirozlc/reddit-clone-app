@@ -20,11 +20,6 @@ const AuthButtons: React.FC = () => {
         text="Log In"
         onClick={() => handleOpenAuthModal('login')}
       />
-      <Button
-        variant={{ outline: true }}
-        text="Sign Up"
-        onClick={() => handleOpenAuthModal('signup')}
-      />
     </>
   )
 }
