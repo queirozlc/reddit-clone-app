@@ -7,3 +7,32 @@
     @apply bg-light-gray-500;
   }
 }
+
+@layer components {
+  .overlay {
+    @apply fixed inset-0 bg-transparent/40;
+  }
+
+  .spanLink {
+    @apply text-blue-500 underline cursor-pointer font-bold;
+  }
+  .spanLinkSecondary {
+    @apply text-blue-500 cursor-pointer;
+  }
+
+  .authText {
+    @apply text-dark-gray-500 font-medium font-body text-xs;
+  }
+
+  .authInput {
+    @apply w-full rounded-full px-6 h-12 outline-none hover:border hover:border-gray-400/60 focus:border border-gray-400/60 bg-gray-100 transition-all duration-300 placeholder-transparent font-title text-sm font-medium xs:text-base;
+  }
+
+  .floatingLabel {
+    @apply text-gray-500 text-xs font-title font-medium transition-all duration-200 ease-in-out absolute left-0 -top-3 px-6 py-3 peer-placeholder-shown:top-0 peer-placeholder-shown:text-sm peer-hover:-top-3 peer-hover:text-xs peer-focus:-top-3 peer-focus:text-xs;
+  }
+
+  .buttonDisabled {
+    @apply !opacity-50 cursor-default pointer-events-none;
+  }
+}
